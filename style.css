@@ -169,7 +169,13 @@ section .title::after{
     width: 100%;
     color: #fff;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;       /* Tengah secara vertikal */
+    justify-content: flex-start; /* Posisi kiri secara horizontal */
+    padding-left: 60px;        /* Jarak dari sisi kiri */
 }
+
 
 #bg-video {
     position: absolute;
@@ -182,10 +188,15 @@ section .title::after{
 }
 
 .home-content {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 60px; /* Atur seberapa jauh dari sisi kiri */
+    transform: translateY(-50%);
     z-index: 1;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Untuk keterbacaan teks */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
+
+
 
 /* Pertahankan styling teks yang sudah ada */
 .home .home-content .text-1 {
